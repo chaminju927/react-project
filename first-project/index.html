@@ -11,11 +11,16 @@
  <script type="text/babel">
     const root = document.getElementById("root");
     function App() {
-      const [counter, modifier] = React.useState(0);
+      const [counter, setCounter] = React.useState(0);  //0이 초기값
+      const onClick = () => {
+        setCounter(counter + 1);   //이 함수가 카운터 카운터값을 변경 후 리렌더링까지 해
+      };
+      console.log("rendered");
+      console.log(counter);
       return(
         <div>
           <h3>Total clicks: {counter}</h3>
-          <button>Click me</button>
+          <button onClick={onClick}>Click me</button>
         </div>
       );
     }
