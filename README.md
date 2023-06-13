@@ -16,3 +16,8 @@
 #### 3. state를 셋팅하는 법?
 #### - 직접 할당 : setState(state+1)
 #### - 함수를 할당 : setState(current => current+1)
+
+## 🗒 2023/06/13 : 3.5강 - 
+### 주요 내용 :
+#### 1. jsx에서는 class나 for같은 js속성을 그대로 사용 불가. className, htmlFor로 사용함
+#### 2. React.useState()는 array를 제공하고 첫번째 element가 현재값. 이 배열을 const []에 할당할때 [첫번째 element, 첫element를 수정해주는 modifier]
