@@ -5,12 +5,12 @@
 <body>
   <div id="root"></div>
 </body>
- <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
- <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js" crossorigin></script>
- <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
- <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
- <script type="text/babel">
-   function Btn({ text, fontSize }) {  //버튼으로 부터 받아온 props값이 아규먼트 
+<script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+   function Btn({ text, fontSize = 12 }) {  //버튼으로 부터 받아온 props값이 아규먼트 
     return (
         <button 
           onClick={onClick}
@@ -27,14 +27,14 @@
     );
    }
    Btn.propTypes = {
-      text: PropTypes.string,
+      text: PropTypes.string.isRequired,
       fontSize: PropTypes.number,
    }
    function App() {
     return(
         <div> 
           <Btn text="Save Changes" fontSize={18} />
-          <Btn text="Save Changes" fontSize={18} />
+          <Btn text="Changes" />
         </div>
       );
     }
